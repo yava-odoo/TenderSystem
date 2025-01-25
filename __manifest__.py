@@ -10,6 +10,7 @@
     'data': [
         'data/ir_sequence_data.xml',
         'views/tender_views.xml',
+        'security/tender_security.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,

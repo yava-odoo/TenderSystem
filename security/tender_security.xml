@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="tender_system.module_tender_system" model="ir.module.category">
+            <field name="name">Tender System</field>
+            <field name="description">Helps you manage tenders</field>
+            <field name="sequence">19900</field>
+        </record>
+
+        <!-- Group for Tender User -->
+        <record id="group_tender_user" model="res.groups">
+            <field name="name">Tender User</field>
+            <field name="implied_ids" eval="[(6, 0, [ref('base.group_user')])]"/>
+            <field name="category_id" ref="tender_system.module_tender_system"/>
+        </record>
+
+        <!-- Group for Tender Manager -->
+        <record id="group_tender_manager" model="res.groups">
+            <field name="name">Tender Manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_tender_user'))]"/>
+            <field name="category_id" ref="tender_system.module_tender_system"/>
+        </record>
+    </data>
+</odoo>

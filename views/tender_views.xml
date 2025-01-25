@@ -33,7 +33,6 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="srm_enquiry_number"/>
                             <field name="customer_name"/>
                             <field name="customer_location"/>
                         </group>
